@@ -7,13 +7,16 @@ import com.library.utility.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.Given;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
     @Before
-    public void connection(){
+
+    @Given("Establish the database connection")
+    public void establish_the_database_connection() {
         String url = "jdbc:mysql://34.230.35.214:3306/library2";
         String username = "library2_client";
         String password = "6s2LQQTjBcGFfDhY";
